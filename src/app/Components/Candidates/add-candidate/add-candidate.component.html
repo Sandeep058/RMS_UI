@@ -1,0 +1,37 @@
+<div class="container my-5">
+    <h1 class="mb-3"> New Candidate</h1>
+    
+    <div class="row">
+        <div class="col-6">
+            <form #form = "ngForm" (ngSubmit)="addCandidate()">
+                <div class="mb-3">
+                  <label for="fname" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="fname" name="fname" [(ngModel)] = "addCandidateRequest.firstName">
+                </div>
+                <div class="mb-3">
+                    <label for="lname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="lname" [(ngModel)] = "addCandidateRequest.lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" [(ngModel)] = "addCandidateRequest.email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" [(ngModel)] = "addCandidateRequest.phone">
+                </div>
+                <div class="mb-3">
+                    <label for="department" class="form-label">Department</label>
+                    <input type="text" class="form-control" id="department" name="department" [(ngModel)] = "addCandidateRequest.department">
+                </div>
+
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Resume Upload</label>
+                    <input class="form-control form-control-sm" id="resumeUpload" type="file" name = "resume" (change)="onChange($event)">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
